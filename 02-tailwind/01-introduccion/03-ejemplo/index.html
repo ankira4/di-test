@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Menu Hamburguesa Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <header class="bg-amber-950 text-white p-4 flex items-center justify-between">
+    <div class="text-2xl font-bold">Mi Sitio</div>
+
+    <!-- Botón hamburguesa -->
+    <button id="menu-btn" class="md:hidden focus:outline-none">
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Menú -->
+    <nav
+      id="menu"
+      class="hidden absolute top-full left-0 w-full bg-amber-950 md:static md:flex md:space-x-6 md:w-auto md:bg-transparent"
+    >
+      <a href="#" class="block px-4 py-2 hover:underline border-b border-amber-700 md:border-none">Inicio</a>
+      <a href="#" class="block px-4 py-2 hover:underline border-b border-amber-700 md:border-none">Servicios</a>
+      <a href="#" class="block px-4 py-2 hover:underline border-b border-amber-700 md:border-none">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="p-4">
+    <h1 class="text-3xl font-bold mb-4">Contenido principal</h1>
+    <p>Este es el contenido principal de la página.</p>
+  </main>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+  
+</body>
+</html>
+
