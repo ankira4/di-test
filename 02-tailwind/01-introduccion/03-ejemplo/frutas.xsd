@@ -1,0 +1,38 @@
+<Pallet xmlns="http://example.com/frutas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.com/frutas pallet.xsd" id="PAL-0001" pesoTotal="200.75" destino="Mercado Central" fechaEnvio="2025-10-10">
+<Caja id="CX-001" peso="120.50" material="madera" color="natural">
+<Fruta nombre="Manzana" cantidad="50" peso="0.18" madurez="madura" origen="España"/>
+<Fruta nombre="Pera" cantidad="30" peso="0.20" madurez="media" origen="Portugal"/>
+<Fruta nombre="Kiwi" cantidad="10" peso="0.09" madurez="verde" origen="Italia"/>
+</Caja>
+<Caja id="CX-002" peso="80.25" material="cartón" color="marrón">
+<Fruta nombre="Naranja" cantidad="40" peso="0.22" madurez="madura" origen="España"/>
+<Fruta nombre="Plátano" cantidad="25" peso="0.12" madurez="madura" origen="Canarias"/>
+<Fruta nombre="Uva" cantidad="100" peso="0.01" madurez="media" origen="Chile"/>
+</Caja>
+</Pallet>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="Pallet">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="Caja1" maxOccurs="unbounded">
+                <xs:complexType> 
+                    <xs:sequence>
+                         <xs:element name="Fruta" maxOccurs="unbounded">
+                            <xs:complexType> 
+                                  <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string" use="required"/>
+                                        <xs:element name="cantidad" type="xs:positiveInteger" use="required"/>
+                                        <xs:element name="peso" type="xs:decimal" use="required"/>
+                                        <xs:element name="madurez" type="xs:string" use="required"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
