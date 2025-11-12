@@ -97,8 +97,8 @@ console.log("Multiplicación 4 * 6 =", multiplicar(4, 6));
 function esMayorDeEdad(edad) {
   return edad >= 18;
 }
-console.log("76 es mayor de edad?", esMayorDeEdad(20));
-console.log("9 es mayor de edad?", esMayorDeEdad(15));
+console.log("76 es mayor de edad?", esMayorDeEdad(76));
+console.log("9 es mayor de edad?", esMayorDeEdad(9));
 
 
 

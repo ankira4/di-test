@@ -1,11 +1,9 @@
 # 📝 Ejercicios de Módulos en JavaScript
-```js
+
 ### 1. Exportar e importar constantes
 Crea un archivo `constantes.js` que contenga varias constantes como el nombre de la app, la versión y el autor.  
 Importa esas constantes en `app.js` y muéstralas en consola.  
-export const APP_NAME = "aplñicacion";
-export const VERSION = "1.0.0";
-export const AUTOR = "Andrea";
+
 
 ---
 
@@ -20,7 +18,6 @@ Crea un archivo `saludos.js` que tenga una exportación por defecto con una func
 Importa esa función en `index.js` y úsala con tu nombre.  
 
 ---
-
 ### 4. Combinar exportaciones  
 En `utils.js` exporta:
 - Una constante llamada `APP_NAME`.  
